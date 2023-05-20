@@ -1,0 +1,17 @@
+.ModalBody {
+  position: fixed;
+  inset: 0;
+  background: rgba($color: var(--mode-clr), $alpha: .8);
+  backdrop-filter: blur(1px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__Wrapper {
+    padding: var(--spacing);
+    background: var(--mode-clr);
+    color: var(--secondary-clr);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+}
