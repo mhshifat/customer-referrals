@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import AppHeader from '@/components/partials/AppHeader/AppHeader'
 import Providers from '@/providers'
+import AppCanvas from '@/components/partials/AppCanvas/AppCanvas'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,7 +21,10 @@ export default function RootLayout({
       <body suppressHydrationWarning={true} className={inter.className}>
         <Providers>
           <AppHeader />
-          {children}
+          <main style={{ padding: 'var(--spacing-ly)' }}>
+            <AppCanvas />
+            {children}
+          </main>
         </Providers>
       </body>
     </html>

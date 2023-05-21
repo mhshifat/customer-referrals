@@ -1,0 +1,31 @@
+.Button {
+  width: max-content;
+  padding: 0 2rem;
+  height: var(--el-size);
+  outline-color: transparent;
+  border: 1px solid transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-sizing: border-box;
+  border-radius: calc(var(--radius) / 2);
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+
+  &__Primary {
+    border: 2px solid var(--primary-linear-gradient);
+    background: var(--primary-linear-gradient);
+    color: var(--mode-clr);
+    transition: color 250ms ease-in, background 300ms ease-in;
+    
+    &:hover {
+      border: 2px solid var(--primary-clr);
+      background: var(--mode-clr);
+      color: var(--primary-clr);
+    }
+  }
+}

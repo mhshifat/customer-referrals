@@ -3,7 +3,7 @@ import { Children, PropsWithChildren, ReactElement, cloneElement, useEffect } fr
 import { useModal } from "./Context";
 import ModalTrigger from "./Trigger";
 import ModalBody from "./Body";
-import hashText from "@/app/utils/hashText";
+import hashText from "@/utils/hashText";
 
 export default function Modal({ children, title }: PropsWithChildren<{ open?: boolean, title: string }>) {
   const identifier = hashText(title);

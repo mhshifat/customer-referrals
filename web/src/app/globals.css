@@ -8,9 +8,13 @@
   --spacing-ly: 1.85rem 2.85rem;
   --primary-clr: #425AE7;
   --secondary-clr: #081E57;
+  --border-clr: #D9E3FA;
+  --disabled-clr: #D9E3FA;
   --shadow: 0px 17.8332px 43.84px rgba(50, 85, 233, 0.26);
   --radius: 10px;
   --spacing: 1em 2.5em;
+  --el-size: 35px;
+  --primary-linear-gradient: linear-gradient(180deg, #6D8AFF 0%, #2C4CED 100%);
 }
 
 * {

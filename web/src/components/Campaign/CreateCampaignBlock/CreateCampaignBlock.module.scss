@@ -1,0 +1,60 @@
+.CreateCampaignBlock {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  &__Info {
+    flex: 1;
+
+    & > h3 {
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+      color: #081E57;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      & > span:first-child {
+        background: var(--disabled-clr);
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: var(--secondary-clr);
+      }
+    }
+
+    & > p {
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 20px;
+      color: var(--secondary-clr);
+      opacity: 0.6;
+      margin-top: 1.6rem;
+    }
+  }
+
+  &__Content {
+    flex: 2;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    background: var(--mode-clr);
+    border: 1px solid var(--border-clr);
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+  }
+
+  &__Checked {
+    background: var(--primary-linear-gradient) !important;
+    color: var(--mode-clr) !important;
+  }
+}
