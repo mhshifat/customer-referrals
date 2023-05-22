@@ -1,0 +1,51 @@
+.CreateCampaignBox {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--mode-clr);
+  border: 1px solid var(--border-clr);
+  border-radius: var(--radius);
+  padding: 25px;
+  height: 100%;
+
+  & > span {
+    width: 40%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      aspect-ratio: 16 / 9;
+    }
+  }
+
+  & > h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--secondary-clr);
+    margin-bottom: 1.6rem;
+  }
+
+  & > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--secondary-clr);
+    opacity: 0.6;
+  }
+
+  &__Active {
+    border: 2px solid var(--primary-clr) !important;
+    box-shadow: var(--shadow) !important;
+  }
+}

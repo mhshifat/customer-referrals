@@ -6,7 +6,8 @@
   margin-bottom: 3rem;
 
   &__Info {
-    flex: 1;
+    flex-basis: 400px;
+    flex-shrink: 0;
 
     & > h3 {
       font-weight: 600;
@@ -40,7 +41,8 @@
   }
 
   &__Content {
-    flex: 2;
+    flex: 1;
+    flex-shrink: 0;
     align-self: stretch;
     display: flex;
     flex-direction: column;

@@ -1,6 +1,5 @@
 .Button {
   width: max-content;
-  padding: 0 2rem;
   height: var(--el-size);
   outline-color: transparent;
   border: 1px solid transparent;
@@ -16,6 +15,10 @@
   text-align: center;
   color: #FFFFFF;
 
+  & > span {
+    white-space: nowrap;
+  }
+
   &__Primary {
     border: 2px solid var(--primary-linear-gradient);
     background: var(--primary-linear-gradient);
@@ -26,6 +29,28 @@
       border: 2px solid var(--primary-clr);
       background: var(--mode-clr);
       color: var(--primary-clr);
+    }
+  }
+
+  &__PrimaryNoOutlined {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #4765F0;
+    background: transparent;
+    outline-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: .7em 1.5em;
+    border-radius: var(--radius);
+    border: 2px solid transparent;
+    transition: border 200ms ease-in;
+
+    &:hover {
+      border: 2px solid var(--primary-clr);
     }
   }
 }
