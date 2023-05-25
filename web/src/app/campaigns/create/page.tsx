@@ -2,6 +2,7 @@ import CampaignGoalBlock from "@/components/Campaign/CampaignGoalBlock";
 import CampaignInformationBlock from "@/components/Campaign/CampaignInformationBlock";
 import CreateCampaignBlock from "@/components/Campaign/CreateCampaignBlock";
 import DisplayTypeBlock from "@/components/Campaign/DisplayTypeBlock";
+import FriendIncentiveBlock from "@/components/Campaign/FriendIncentiveBlock";
 import ReferralLinkTypeBlock from "@/components/Campaign/ReferralLinkTypeBlock";
 import PageTitle from "@/components/partials/PageTitle/PageTitle";
 import Button from "@/components/ui/Button/Button";
@@ -17,6 +18,7 @@ export default function CreateCampaign() {
 					</Button>
 				}
 			/>
+      {/* Campaign Information */}
 			<CreateCampaignBlock
 				number={1}
 				title="Campaign Information"
@@ -24,6 +26,7 @@ export default function CreateCampaign() {
 			>
 				<CampaignInformationBlock />
 			</CreateCampaignBlock>
+      {/* Campaign Goal */}
 			<CreateCampaignBlock
 				number={2}
 				title="Campaign Goal"
@@ -31,6 +34,7 @@ export default function CreateCampaign() {
 			>
 				<CampaignGoalBlock />
 			</CreateCampaignBlock>
+      {/* Display Type */}
 			<CreateCampaignBlock
 				number={3}
 				title="Display Type"
@@ -38,12 +42,21 @@ export default function CreateCampaign() {
 			>
 				<DisplayTypeBlock />
 			</CreateCampaignBlock>
+      {/* Referral Link Type */}
 			<CreateCampaignBlock
 				number={4}
 				title="Referral Link Type"
 				subTitle=""
 			>
 				<ReferralLinkTypeBlock />
+			</CreateCampaignBlock>
+      {/* Friend Incentive */}
+			<CreateCampaignBlock
+				number={5}
+				title="Friend Incentive"
+				subTitle='The user that receives the referral is a "friend". Choose what kind of incentive to offer the friend, and whether it should only apply to new customers.'
+			>
+				<FriendIncentiveBlock />
 			</CreateCampaignBlock>
 		</div>
 	);

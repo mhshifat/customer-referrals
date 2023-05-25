@@ -1,0 +1,9 @@
+.Dropdown {
+  width: max-content;
+  background: var(--mode-clr);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  position: fixed;
+  z-index: 99;
+  user-select: none;
+}

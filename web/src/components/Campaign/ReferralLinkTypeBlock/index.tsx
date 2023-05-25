@@ -6,12 +6,13 @@ import { useState } from "react";
 import UsersPng from "../../../app/assets/images/create-campaign/users.png";
 import ChainsPng from "../../../app/assets/images/create-campaign/chain.png";
 import Image from "next/image";
+import Grid from "@/components/ui/Grid/Grid";
 
 export default function ReferralLinkTypeBlock({}) {
 	const [checkedValue, setCheckedValue] = useState("");
 
 	return (
-		<div className={classes.ReferralLinkTypeBlock}>
+		<Grid className={classes.ReferralLinkTypeBlock}>
 			<Radio>
 				<Radio.Block
 					isActive={checkedValue === "unique-each-referral"}
@@ -54,6 +55,6 @@ export default function ReferralLinkTypeBlock({}) {
 					/>
 				</Radio.Block>
 			</Radio>
-		</div>
+		</Grid>
 	);
 }

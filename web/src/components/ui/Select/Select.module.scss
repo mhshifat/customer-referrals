@@ -1,0 +1,73 @@
+.Select {
+  width: 100%;
+  height: 50px;
+  background: var(--mode-clr);
+  border: 2px solid var(--border-clr);
+  border-radius: var(--radius);
+  padding: 2px 20px;
+  outline: none;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--secondary-clr);
+  opacity: 0.5;
+  transition: opacity 200ms ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+
+  &__Selected {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: capitalize;
+    user-select: none;
+  }
+
+  &__Options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+    padding: 5px 0;
+    width: 100%;
+
+    & > li {
+      padding: 5px 10px;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 15px;
+      line-height: 22px;
+      text-align: center;
+      text-transform: capitalize;
+      color: var(--secondary-clr);
+      cursor: pointer;
+      width: 100%;
+      position: relative;
+      z-index: 1;
+      text-align: left;
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        transition: background 200ms ease-in;
+        opacity: .2;
+      }
+
+      &:hover::before {
+        background: var(--primary-clr);
+      }
+    }
+  }
+
+  &__Active {
+    border-color: var(--primary-clr);
+  }
+}

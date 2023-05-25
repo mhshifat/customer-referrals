@@ -6,12 +6,13 @@ import BasketPng from "../../../app/assets/images/create-campaign/basket.png";
 import EnvelopePng from "../../../app/assets/images/create-campaign/envelop.png";
 import Image from "next/image";
 import { useState } from "react";
+import Grid from "@/components/ui/Grid/Grid";
 
 export default function CampaignGoalBlock() {
   const [checkedValue, setCheckedValue] = useState('');
 
 	return (
-		<div className={classes.CampaignGoalBlock}>
+		<Grid className={classes.CampaignGoalBlock}>
 			<Radio>
 				<Radio.Block
           isActive={checkedValue === 'more-purchase'}
@@ -54,6 +55,6 @@ export default function CampaignGoalBlock() {
 					/>
 				</Radio.Block>
 			</Radio>
-		</div>
+		</Grid>
 	);
 }

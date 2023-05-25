@@ -7,12 +7,13 @@ import Image from "next/image";
 import CustomPagePng from "../../../app/assets/images/create-campaign/custom-page.png";
 import PostPurchaseModalPng from "../../../app/assets/images/create-campaign/post-purchase-modal.png";
 import PostPurchaseEmailPng from "../../../app/assets/images/create-campaign/post-purchase-email.png";
+import Grid from "@/components/ui/Grid/Grid";
 
 export default function DisplayTypeBlock({}) {
 	const [checkedValue, setCheckedValue] = useState("");
 
 	return (
-		<div className={classes.DisplayTypeBlock}>
+		<Grid className={classes.DisplayTypeBlock}>
 			<Radio>
 				<Radio.Block
 					isActive={checkedValue === "custom-page"}
@@ -75,6 +76,6 @@ export default function DisplayTypeBlock({}) {
 					/>
 				</Radio.Block>
 			</Radio>
-		</div>
+		</Grid>
 	);
 }
