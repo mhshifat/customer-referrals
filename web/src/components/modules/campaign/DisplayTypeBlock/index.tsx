@@ -4,9 +4,9 @@ import classes from "./DisplayTypeBlock.module.scss";
 import { useState } from "react";
 import CreateCampaignBox from "../CreateCampaignBox";
 import Image from "next/image";
-import CustomPagePng from "../../../app/assets/images/create-campaign/custom-page.png";
-import PostPurchaseModalPng from "../../../app/assets/images/create-campaign/post-purchase-modal.png";
-import PostPurchaseEmailPng from "../../../app/assets/images/create-campaign/post-purchase-email.png";
+import CustomPagePng from "../../../../app/assets/images/create-campaign/custom-page.png";
+import PostPurchaseModalPng from "../../../../app/assets/images/create-campaign/post-purchase-modal.png";
+import PostPurchaseEmailPng from "../../../../app/assets/images/create-campaign/post-purchase-email.png";
 import Grid from "@/components/ui/Grid/Grid";
 
 export default function DisplayTypeBlock({}) {

@@ -1,9 +1,9 @@
-import CampaignGoalBlock from "@/components/Campaign/CampaignGoalBlock";
-import CampaignInformationBlock from "@/components/Campaign/CampaignInformationBlock";
-import CreateCampaignBlock from "@/components/Campaign/CreateCampaignBlock";
-import DisplayTypeBlock from "@/components/Campaign/DisplayTypeBlock";
-import FriendIncentiveBlock from "@/components/Campaign/FriendIncentiveBlock";
-import ReferralLinkTypeBlock from "@/components/Campaign/ReferralLinkTypeBlock";
+import CampaignGoalBlock from "@/components/modules/campaign/CampaignGoalBlock";
+import CampaignInformationBlock from "@/components/modules/campaign/CampaignInformationBlock";
+import CreateCampaignBlock from "@/components/modules/campaign/CreateCampaignBlock";
+import DisplayTypeBlock from "@/components/modules/campaign/DisplayTypeBlock";
+import FriendIncentiveBlock from "@/components/modules/campaign/FriendIncentiveBlock";
+import ReferralLinkTypeBlock from "@/components/modules/campaign/ReferralLinkTypeBlock";
 import PageTitle from "@/components/partials/PageTitle/PageTitle";
 import Button from "@/components/ui/Button/Button";
 

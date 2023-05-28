@@ -1,4 +1,4 @@
-import CreateCampaignDialogModal from "@/components/Campaign/CreateCampaignDialogModal";
+import CreateCampaignDialogModal from "@/components/modules/campaign/CreateCampaignDialogModal";
 
 export default function Home() {
   return (

@@ -4,8 +4,8 @@ import classes from './FriendIncentiveBlock.module.scss';
 import { useState } from 'react';
 import CreateCampaignBox from '../CreateCampaignBox';
 import Image from 'next/image';
-import AutomaticDiscountPng from '../../../app/assets/images/create-campaign/automatic-discount.png';
-import ManuallyAddedCustomDiscountPng from '../../../app/assets/images/create-campaign/manually-added-custom-discount -codes.png';
+import AutomaticDiscountPng from '../../../../app/assets/images/create-campaign/automatic-discount.png';
+import ManuallyAddedCustomDiscountPng from '../../../../app/assets/images/create-campaign/manually-added-custom-discount -codes.png';
 import AutomaticallyCreatedDiscountForm from './AutomaticallyCreatedDiscountForm';
 import Grid from '@/components/ui/Grid/Grid';
 

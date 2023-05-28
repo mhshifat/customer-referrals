@@ -1,6 +1,6 @@
 "use client";
 import Modal from '@/components/ui/Modal';
-import CreateCampaign from '../../../app/assets/svg/create-campaign.svg';
+import CreateCampaign from '../../../../app/assets/svg/create-campaign.svg';
 import classes from "./CreateCampaignDialogModal.module.scss";
 import { Poppins } from 'next/font/google';
 import { useRouter } from 'next/navigation';

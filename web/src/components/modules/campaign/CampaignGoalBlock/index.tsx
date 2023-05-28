@@ -2,8 +2,8 @@
 import Radio from "@/components/ui/Radio/Radio";
 import classes from "./CampaignGoalBlock.module.scss";
 import CreateCampaignBox from "../CreateCampaignBox";
-import BasketPng from "../../../app/assets/images/create-campaign/basket.png";
-import EnvelopePng from "../../../app/assets/images/create-campaign/envelop.png";
+import BasketPng from "../../../../app/assets/images/create-campaign/basket.png";
+import EnvelopePng from "../../../../app/assets/images/create-campaign/envelop.png";
 import Image from "next/image";
 import { useState } from "react";
 import Grid from "@/components/ui/Grid/Grid";

@@ -3,8 +3,8 @@ import Radio from "@/components/ui/Radio/Radio";
 import classes from "./ReferralLinkTypeBlock.module.scss";
 import CreateCampaignBox from "../CreateCampaignBox";
 import { useState } from "react";
-import UsersPng from "../../../app/assets/images/create-campaign/users.png";
-import ChainsPng from "../../../app/assets/images/create-campaign/chain.png";
+import UsersPng from "../../../../app/assets/images/create-campaign/users.png";
+import ChainsPng from "../../../../app/assets/images/create-campaign/chain.png";
 import Image from "next/image";
 import Grid from "@/components/ui/Grid/Grid";
 
