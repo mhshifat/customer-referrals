@@ -1,0 +1,10 @@
+.Accordion {
+  width: 100%;
+
+  &__Trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+}

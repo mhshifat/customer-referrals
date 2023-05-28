@@ -1,0 +1,42 @@
+.Checkbox {
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  user-select: none;
+
+  & > i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 22px;
+    height: 22px;
+    border: 2px solid var(--border-clr);
+    border-radius: 5px;
+    cursor: pointer;
+
+    & > svg {
+      font-size: 1rem;
+      display: none;
+    }
+  }
+
+  & > span {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: var(--secondary-clr);
+  }
+
+  & > input {
+    &:checked ~ i {
+      border-color: var(--primary-clr);
+
+      & > svg {
+        display: block;
+        fill: var(--primary-clr);
+      }
+    }
+  }
+}
