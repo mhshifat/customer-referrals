@@ -7,10 +7,11 @@ import Checkbox from "@/components/ui/Checkbox/Checkbox";
 import HelperText from "@/components/partials/HelperText/HelperText";
 import Divider from "@/components/ui/Divider/Divider";
 import Accordion from "@/components/ui/Accordion";
-import classnames from 'classnames';
+import classnames from "classnames";
 import { Poppins } from "next/font/google";
+import DisableArea from "@/components/partials/DisableArea/DisableArea";
 
-const poppins = Poppins({ subsets: ['latin'], weight: ["500", '600'] })
+const poppins = Poppins({ subsets: ["latin"], weight: ["500", "600"] });
 
 export default function AutomaticallyCreatedDiscountForm({}) {
 	return (
@@ -45,39 +46,43 @@ export default function AutomaticallyCreatedDiscountForm({}) {
 				</div>
 			</Grid>
 			<div>
-        <Label>Discount Code Expiration</Label>
-        <Input
-          placeholder="Set this value to 0 if you want the discount never to expire"
-          type="text"
-        />
-      </div>
-			<div>
-        <HelperText
-          text={
-            <>
-              If you have ReCharge integration enabled on the integrations
-              page, you can allow Friends to use their referral discount codes
-              on subscription products. Note that ReCharge doesn&apos;t
-              support certain features, such as minimum order amount or
-              limiting by product/collection.
-            </>
-          }
-        >
-          <Checkbox
-            text={<span>Also create discount codes in ReCharge</span>}
-          />
-        </HelperText>
+				<Label>Discount Code Expiration</Label>
+				<Input
+					placeholder="Set this value to 0 if you want the discount never to expire"
+					type="text"
+				/>
+			</div>
+			<HelperText
+					text={
+						<>Discount codes will only be valid when used by a new customer.</>
+					}
+				>
+					<Checkbox
+						text={<span>Restrict offer to first-time customers</span>}
+					/>
+				</HelperText>
 
-        <Divider />
-
-        <Accordion>
-          <Accordion.Item
-            trigger={<span className={classnames(classes.AutomaticallyCreatedDiscountForm__SectionTitle, poppins.className)}>More Referrer Incentive Options</span>}
+        <DisableArea>
+          <HelperText
+            text={
+              <>
+                If you have ReCharge integration enabled on the integrations page,
+                you can allow Friends to use their referral discount codes on
+                subscription products. Note that ReCharge doesn&apos;t support certain
+                features, such as minimum order amount or limiting by
+                product/collection.
+              </>
+            }
           >
-            <p>Welcome</p>
-          </Accordion.Item>
-        </Accordion>
-      </div>
+            <Checkbox
+              text={
+                <span>
+                  Discount codes will only be valid when used by a new customer.
+                </span>
+              }
+            />
+          </HelperText>
+        </DisableArea>
 		</div>
 	);
 }

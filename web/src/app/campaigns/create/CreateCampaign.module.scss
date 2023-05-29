@@ -1,0 +1,21 @@
+.CreateCampaign {
+  padding-bottom: 5rem;
+
+  &__FloatingBar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-family: 'Poppins';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+      color: var(--secondary-clr);
+    }
+  }
+}

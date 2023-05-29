@@ -1,0 +1,45 @@
+.CampaignCreatedSuccessfullyModal {
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__Header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    & > svg {
+      cursor: pointer;
+    }
+  }
+
+  & > h3 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: var(--secondary-clr);
+  }
+
+  & > p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: var(--secondary-clr);
+    opacity: 0.55;
+    margin-top: 18px;
+    width: 45ch;
+  }
+
+  &__Footer {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 26px 0 15px 0;
+  }
+}

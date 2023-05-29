@@ -11,7 +11,7 @@ import { Poppins } from "next/font/google";
 import Loader from "../Loader/Loader";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-	variant: "primary" | "primary-no-outlined";
+	variant: "primary" | "primary-no-outlined" | 'secondary';
 	loading?: boolean;
 	width: string;
 }
@@ -19,6 +19,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 const VARIANT_CSS = {
 	primary: "Button__Primary",
 	"primary-no-outlined": "Button__PrimaryNoOutlined",
+	"secondary": "Button__Secondary",
 };
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600"] });

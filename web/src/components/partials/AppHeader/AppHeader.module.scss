@@ -1,9 +1,17 @@
 .AppHeader {
   padding: var(--spacing-ly);
   background: var(--mode-clr);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+  &__Container {
+    width: var(--max-width);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-ly);
+    padding-bottom: 0;
+    padding-top: 0;
+  }
 
   &__Logo {
     display: flex;

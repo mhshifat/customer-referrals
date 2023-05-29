@@ -1,0 +1,15 @@
+.FloatingActionBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: var(--mode-clr);
+  box-shadow: var(--shadow);
+  width: 100%;
+  z-index: 99;
+
+  &__Container {
+    width: var(--max-width);
+    margin: 0 auto;
+    padding: var(--spacing-ly);
+  }
+}

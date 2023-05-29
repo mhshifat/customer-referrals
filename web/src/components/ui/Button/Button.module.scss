@@ -14,6 +14,7 @@
   line-height: 20px;
   text-align: center;
   color: #FFFFFF;
+  user-select: none;
 
   & > span {
     white-space: nowrap;
@@ -52,5 +53,28 @@
     &:hover {
       border: 2px solid var(--primary-clr);
     }
+  }
+
+  &__Secondary {
+    background: linear-gradient(180deg, #F6F8FF 0%, #CEDCFF 100%);
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    text-align: center;
+    color: #4765F5;
+    border-color: #F6F8FF;
+    transition: background 200ms ease-in;
+
+    &:hover {
+      background: var(--secondary-clr);
+      color: var(--mode-clr);
+    }
+  }
+
+  &:disabled {
+    background: var(--disabled-clr);
+    pointer-events: none;
   }
 }

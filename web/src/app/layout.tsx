@@ -21,7 +21,7 @@ export default function RootLayout({
       <body suppressHydrationWarning={true} className={inter.className}>
         <Providers>
           <AppHeader />
-          <main style={{ padding: 'var(--spacing-ly)' }}>
+          <main style={{ padding: 'var(--spacing-ly)', width: 'var(--max-width)', margin: '0 auto' }}>
             <AppCanvas />
             {children}
           </main>

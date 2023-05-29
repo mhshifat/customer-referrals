@@ -22,6 +22,7 @@
       height: 100%;
       object-fit: contain;
       aspect-ratio: 16 / 9;
+      min-width: 120px;
     }
   }
 
@@ -32,6 +33,7 @@
     line-height: 22px;
     color: var(--secondary-clr);
     margin-bottom: 1.6rem;
+    text-align: center;
   }
 
   & > p {

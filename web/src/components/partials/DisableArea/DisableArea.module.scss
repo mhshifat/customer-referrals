@@ -1,0 +1,11 @@
+.DisableArea {
+  width: 100%;
+  height: auto;
+  position: relative;
+
+  & > * {
+    opacity: .5;
+    pointer-events: none;
+    user-select: none;
+  }
+}
