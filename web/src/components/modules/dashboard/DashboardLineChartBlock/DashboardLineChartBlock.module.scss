@@ -1,0 +1,34 @@
+.DashboardLineChartBlock {
+  width: 100%;
+  background: var(--mode-clr);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 36px;
+
+  &__Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 100%;
+
+    & > h3 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 22px;
+      color: var(--secondary-clr);
+    }
+
+    & > div {
+      transform: scale(.8);
+      transform-origin: right;
+    }
+  }
+
+  &__Chart {
+    margin-top: 37px;
+    min-height: 200px;
+  }
+}
+

@@ -1,5 +1,5 @@
 :root {
-  --max-width: 1300px;
+  --max-width: 1400px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
     'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
     'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
@@ -43,3 +43,6 @@ a {
   text-decoration: none;
 }
 
+.recharts-responsive-container {
+  height: 300px !important;
+}

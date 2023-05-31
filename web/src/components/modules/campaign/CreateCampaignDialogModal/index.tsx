@@ -20,9 +20,6 @@ export default function CreateCampaignDialogModal() {
   return (
     <>
       <Modal title="Click me to open Modal">
-        <Modal.Trigger>
-          <button>Click me to open Modal</button>
-        </Modal.Trigger>
         <Modal.Body>
           <div className={classes.CreateCampaignDialogModal}>
             <h5 className={poppins.className}>Create Your First</h5>
