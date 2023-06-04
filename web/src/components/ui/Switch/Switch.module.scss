@@ -1,0 +1,44 @@
+.Switch {
+  width: max-content;
+  background: var(--disabled-clr);
+  border: 1px solid var(--disabled-clr);
+  border-radius: 13px;
+  box-sizing: border-box;
+  width: 47.5px;
+  height: 23.75px;
+  position: relative;
+  cursor: pointer;
+  transition: all 240ms ease-in;
+
+  &__Bar {
+    position: absolute;
+    width: 17.81px;
+    height: 17.81px;
+    left: 2.47px;
+    background: var(--mode-clr);
+    top: calc(50% - 17.81px/2 + 0.12px);
+    border-radius: 50%;
+    transition: all 240ms ease-in;
+  }
+
+  &:has(input:checked) {
+    background: var(--primary-clr);
+    border: 1px solid var(--primary-clr);
+
+    & > span {
+      left: calc(100% - (2.47px + 17.81px));
+      background: var(--mode-clr);
+    }
+  }
+
+  &:has(input:disabled) {
+    background: var(--disabled-clr);
+    border: 1px solid var(--disabled-clr);
+    cursor: not-allowed;
+
+    & > span {
+      left: 2.47px;
+      background: var(--mode-clr);
+    }
+  }
+}

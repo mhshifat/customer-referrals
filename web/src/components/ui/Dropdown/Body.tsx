@@ -17,7 +17,8 @@ import { useDropdown } from "./Context";
 export default function DropdownBody({
 	children,
 	elementRef,
-}: PropsWithChildren<{ elementRef?: HTMLDivElement }>) {
+	fullWidth = true,
+}: PropsWithChildren<{ elementRef?: HTMLDivElement, fullWidth?: boolean }>) {
   const controls = useAnimationControls()
 	const [position, setPosition] = useState({
 		x: -99999999,
@@ -47,7 +48,26 @@ export default function DropdownBody({
 			const isOutOfBottom =
 				(elRef.current?.bottom || 0) >
 				(window.innerHeight || document.documentElement.clientHeight);
+			const isOutOfRight =
+				(elRef.current?.right || 0) >
+				(window.innerWidth || document.documentElement.clientWidth);
+      
 			if (isOutOfBottom) {
+        if (isOutOfRight) {
+          setPosition({
+            x: boundingPos.x - ((elRef.current?.width || 0) + 10),
+            y: boundingPos.y - ((elRef.current?.height || 0) + 10),
+            width: boundingPos.width,
+            height: boundingPos.height,
+            opacity: 1,
+            placement: 'top'
+          });
+          controls.start({
+            transform: 'translateY(0)',
+            opacity: 1
+          });
+          return;
+        }
 				setPosition({
 					x: boundingPos.x,
 					y: boundingPos.y - ((elRef.current?.height || 0) + 10),
@@ -61,6 +81,21 @@ export default function DropdownBody({
           opacity: 1
         });
 			} else {
+        if (isOutOfRight) {
+          setPosition({
+            x: boundingPos.x,
+            y: boundingPos.y + boundingPos.height + 10,
+            width: boundingPos.width,
+            height: boundingPos.height,
+            opacity: 1,
+            placement: 'top'
+          });
+          controls.start({
+            transform: 'translateY(0)',
+            opacity: 1
+          });
+          return;
+        }
         setPosition({
           x: boundingPos.x,
           y: boundingPos.y + boundingPos.height + 10,
@@ -121,7 +156,7 @@ export default function DropdownBody({
 						style={{
 							top: position.y,
 							left: position.x,
-							width: position.width,
+							width: fullWidth ? position.width : 'max-content',
 							opacity: position.opacity,
 						}}
             initial={{ transform: position.placement === 'top' ? "translateY(-100px)" : "translateY(100px)", opacity: position.opacity }}

@@ -52,7 +52,7 @@ export default function Home() {
       <Grid columns="1fr 1fr 1fr">
         <CampaignCard />
         <CampaignCard />
-        <CampaignCard />
+        <CampaignCard mode="incomplete" />
       </Grid>
     </div>
   )

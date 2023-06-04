@@ -5,14 +5,13 @@ import ModalTrigger from "./Trigger";
 import ModalBody from "./Body";
 import hashText from "@/utils/hashText";
 
-export default function Modal({ children, title }: PropsWithChildren<{ open?: boolean, title: string }>) {
+export default function Modal({ children, title, open }: PropsWithChildren<{ open?: boolean, title: string }>) {
   const identifier = hashText(title);
   const { toggle } = useModal();
 
   useEffect(() => {
-    if (!open) return;
-    toggle(identifier!, true)
-  }, [identifier, toggle]);
+    toggle(identifier!, Boolean(open))
+  }, [identifier, toggle, open]);
 
   return (
     <>

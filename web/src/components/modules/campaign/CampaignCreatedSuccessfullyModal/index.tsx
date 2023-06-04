@@ -4,13 +4,13 @@ import ReferralCampaignCreatedSuccessfullyPng from '../../../../app/assets/image
 import classes from "./CampaignCreatedSuccessfullyModal.module.scss";
 import { Poppins } from 'next/font/google';
 import { useRouter } from 'next/navigation';
-import { useCallback, useState } from 'react';
+import { PropsWithChildren, useCallback, useState } from 'react';
 import Button from '@/components/ui/Button/Button';
 import Image from 'next/image';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ["400", "600"] })
 
-export default function CampaignCreatedSuccessfullyModal() {
+export default function CampaignCreatedSuccessfullyModal({ children }: PropsWithChildren) {
   const router = useRouter();
   const [clicked, setClicked] = useState(false);
 
@@ -24,6 +24,9 @@ export default function CampaignCreatedSuccessfullyModal() {
   return (
     <>
       <Modal title="Campaign Created Successfully Modal">
+        <Modal.Trigger>
+          {children}
+        </Modal.Trigger>
         <Modal.Body>
           <div className={classes.CampaignCreatedSuccessfullyModal}>
             <div className={classes.CampaignCreatedSuccessfullyModal__Header}>

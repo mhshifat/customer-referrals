@@ -11,7 +11,8 @@ const poppins = Poppins({ subsets: ['latin'], weight: ["400", "600"] })
 
 export default function CreateCampaignDialogModal() {
   const router = useRouter();
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const handleGoToCreateCampaign = useCallback(() => {
     setClicked(true);
@@ -19,7 +20,7 @@ export default function CreateCampaignDialogModal() {
   }, [router]);
   return (
     <>
-      <Modal title="Click me to open Modal">
+      <Modal open={open} title="Click me to open Modal">
         <Modal.Body>
           <div className={classes.CreateCampaignDialogModal}>
             <h5 className={poppins.className}>Create Your First</h5>

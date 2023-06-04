@@ -20,9 +20,11 @@ export default function CreateCampaign() {
 			<PageTitle
 				title="New Referral Campaign"
 				primaryBtn={
-					<Button width="129px" variant="primary">
-						Save As Draft
-					</Button>
+          <CampaignCreatedSuccessfullyModal>
+            <Button width="129px" variant="primary">
+              Save As Draft
+            </Button>
+          </CampaignCreatedSuccessfullyModal>
 				}
 			/>
       <FloatingActionBar>
@@ -45,7 +47,6 @@ export default function CreateCampaign() {
           </div>
         </div>
       </FloatingActionBar>
-      <CampaignCreatedSuccessfullyModal />
 			{/* Campaign Information */}
 			<CreateCampaignBlock
 				number={1}
